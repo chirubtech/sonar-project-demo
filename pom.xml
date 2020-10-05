@@ -18,9 +18,9 @@
 		<!-- Sonar properties -->
 				<!-- <sonar.language>mule4</sonar.language>  --><!-- Language to Scan -->
 <!-- 		<sonar.login>fbb2b73e87f288a004d361ac7e6c6b1358a84f76</sonar.login> -->
-		<sonar.lang.patterns.xml>null</sonar.lang.patterns.xml>
-		<sonar.pullrequest.key>1</sonar.pullrequest.key>
-		<sonar.pullrequest.branch>work-new-branch</sonar.pullrequest.branch>
+		<!-- <sonar.lang.patterns.xml>null</sonar.lang.patterns.xml> -->
+		<sonar.pullrequest.key>2</sonar.pullrequest.key>
+		<sonar.pullrequest.branch>new-branch</sonar.pullrequest.branch>
 		<sonar.pullrequest.base>master</sonar.pullrequest.base>
 		
 		<sonar.sources>src/main/mule</sonar.sources> <!-- Directory from where scan Configuration Files -->
