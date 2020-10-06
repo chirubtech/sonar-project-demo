@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="MULE_LIB/com.sfdc.it.ei.mule4.extension/eilog-extension/10.2.86-SNAPSHOT"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="src" path="src/main/mule"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

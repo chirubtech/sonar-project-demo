@@ -16,29 +16,29 @@
 		<app.runtime>4.3.0</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 		<!-- Sonar properties -->
-				<!-- <sonar.language>mule4</sonar.language>  --><!-- Language to Scan -->
-<!-- 		<sonar.login>fbb2b73e87f288a004d361ac7e6c6b1358a84f76</sonar.login> -->
-		<sonar.lang.patterns.xml>null</sonar.lang.patterns.xml>
+		<!-- 
+		<sonar.language>mule4</sonar.language> 
 		<sonar.pullrequest.key>1</sonar.pullrequest.key>
 		<sonar.pullrequest.branch>work-new-branch</sonar.pullrequest.branch>
-		<sonar.pullrequest.base>master</sonar.pullrequest.base>
-		
+		<sonar.pullrequest.base>master</sonar.pullrequest.base> 
+		<sonar.lang.patterns.xml>null</sonar.lang.patterns.xml>
+		-->
 		<sonar.sources>src/main/mule</sonar.sources> <!-- Directory from where scan Configuration Files -->
 	</properties>
  <profiles>
-        <profile>
-            <id>sonar</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <!-- Optional URL to server. Default value is http://localhost:9000 -->
-                <sonar.host.url>
-                 http://54.186.156.227:9000
-                </sonar.host.url>
-            </properties>
-        </profile>
-     </profiles>
+	<profile>
+		<id>sonar</id>
+		<activation>
+			<activeByDefault>true</activeByDefault>
+		</activation>
+		<properties>
+			<!-- Optional URL to server. Default value is http://localhost:9000 -->
+			<sonar.host.url>
+				http://54.186.156.227:9000
+			</sonar.host.url>
+		</properties>
+	</profile>
+</profiles>
 	<build>
 		<plugins>
 			<plugin>
@@ -52,51 +52,47 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-				<classifier>mule-application</classifier>
-                </configuration>
+					<classifier>mule-application</classifier>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 
 	<dependencies>
-        <dependency>
-            <groupId>org.mule.connectors</groupId>
-            <artifactId>mule-http-connector</artifactId>
-            <version>1.5.17</version>
-            <classifier>mule-plugin</classifier>
-        </dependency>
-        <dependency>
-            <groupId>org.mule.connectors</groupId>
-            <artifactId>mule-sockets-connector</artifactId>
-            <version>1.1.6</version>
-            <classifier>mule-plugin</classifier>
-        </dependency>
-	</dependencies>
+	<dependency>
+		<groupId>com.sfdc.it.ei.mule4.extension</groupId>
+		<artifactId>eilog-extension</artifactId>
+		<version>10.2.86-SNAPSHOT</version>
+		<classifier>mule-plugin</classifier>
+		<scope>compile</scope>
+		<optional>true</optional>
+	</dependency>
+</dependencies>
 
 	<repositories>
-          <repository>
-            <id>anypoint-exchange-v2</id>
-            <name>Anypoint Exchange</name>
-            <url>https://maven.anypoint.mulesoft.com/api/v2/maven</url>
-            <layout>default</layout>
-        </repository>
-        <repository>
-            <id>mulesoft-releases</id>
-            <name>MuleSoft Releases Repository</name>
-            <url>https://repository.mulesoft.org/releases/</url>
-            <layout>default</layout>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>mulesoft-releases</id>
-            <name>mulesoft release repository</name>
-            <layout>default</layout>
-            <url>https://repository.mulesoft.org/releases/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-    </pluginRepositories>
+		<repository>
+			<id>anypoint-exchange-v2</id>
+			<name>Anypoint Exchange</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v2/maven</url>
+			<layout>default</layout>
+		</repository>
+		<repository>
+			<id>mulesoft-releases</id>
+			<name>MuleSoft Releases Repository</name>
+			<url>https://repository.mulesoft.org/releases/</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>mulesoft-releases</id>
+			<name>mulesoft release repository</name>
+			<layout>default</layout>
+			<url>https://repository.mulesoft.org/releases/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 
 </project>
