@@ -6,7 +6,7 @@ name: CI
 # events but only for the master branch
 on:
   push:
-    branches: [ "new-branch","master" ]
+    branches: [ "sonar-test","master" ]
   pull_request:
     branches: [ master ]
 
@@ -24,7 +24,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: mvn clean test sonar:sonar
+        run: mvn sonar:sonar
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
