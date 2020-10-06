@@ -65,6 +65,7 @@
 		<version>10.2.86-SNAPSHOT</version>
 		<classifier>mule-plugin</classifier>
 		<scope>compile</scope>
+		<optional>true</optional>
 	</dependency>
 </dependencies>
 
